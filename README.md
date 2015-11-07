@@ -75,4 +75,5 @@
    
 #总结
 
-如果有什么错误，请联系我 woodjobber@outlook.com
+如果有什么错误，请联系作者 woodjobber@outlook.com
+![image](AutoArchiverHelper/woodjobber.jpg);
