@@ -47,25 +47,7 @@ static NSArray *GetIvarList(Class cls)
         id value = [self valueForKey:name];
         [encoder encodeObject:value forKey:name];
     }
-    
-#if 0
-    unsigned int count = 0;
-    Ivar *ivars = class_copyIvarList([self class], &count);
-    for (int i = 0; i < count; i ++) {
 
-        Ivar ivar = ivars[i];
-
-        const char *name = ivar_getName(ivar);
- 
-        NSString *nameStr = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
-        
-        id value = [self valueForKey:nameStr];
-        
-        [encoder encodeObject:value forKey:nameStr];
-    }
-    
-    free(ivars);
-#endif
     
 }
 
@@ -78,26 +60,6 @@ static NSArray *GetIvarList(Class cls)
             
             [self setValue:value forKey:key];
         }
-        
-        
-#if 0
-        unsigned int count = 0;
-        Ivar *ivars = class_copyIvarList([self class], &count);
-        for (int i = 0; i < count; i ++) {
-            Ivar ivar = ivars[i];
-            
-            const char *name = ivar_getName(ivar);
-            
-            NSString *key = [NSString stringWithCString:name encoding:NSUTF8StringEncoding];
-            
-            id value = [decoder decodeObjectForKey:key];
-            
-            [self setValue:value forKey:key];
-        }
-        
-        free(ivars);
-        
-#endif
         
     }
 
