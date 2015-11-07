@@ -24,6 +24,8 @@
 		5D5CDFF31BEE7E0700672CA8 /* AutoArchiverHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDFF21BEE7E0700672CA8 /* AutoArchiverHelperTests.m */; };
 		5D8F6B501BEE8B2E0044187C /* AutoArchiverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F6B4D1BEE8B2E0044187C /* AutoArchiverHelper.m */; };
 		5D8F6B511BEE8B2E0044187C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F6B4F1BEE8B2E0044187C /* Person.m */; };
+		5D8F6B541BEEA25A0044187C /* AutoArchiver.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F6B531BEEA25A0044187C /* AutoArchiver.m */; };
+		5D8F6B571BEEA2AD0044187C /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F6B561BEEA2AD0044187C /* Student.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,10 @@
 		5D8F6B4D1BEE8B2E0044187C /* AutoArchiverHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoArchiverHelper.m; sourceTree = "<group>"; };
 		5D8F6B4E1BEE8B2E0044187C /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		5D8F6B4F1BEE8B2E0044187C /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		5D8F6B521BEEA25A0044187C /* AutoArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoArchiver.h; sourceTree = "<group>"; };
+		5D8F6B531BEEA25A0044187C /* AutoArchiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoArchiver.m; sourceTree = "<group>"; };
+		5D8F6B551BEEA2AD0044187C /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		5D8F6B561BEEA2AD0044187C /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				5D5CDFD31BEE7E0600672CA8 /* AppDelegate.h */,
+				5D8F6B521BEEA25A0044187C /* AutoArchiver.h */,
+				5D8F6B531BEEA25A0044187C /* AutoArchiver.m */,
 				5D5CDFD41BEE7E0600672CA8 /* AppDelegate.m */,
 				5D8F6B4C1BEE8B2E0044187C /* AutoArchiverHelper.h */,
 				5D8F6B4D1BEE8B2E0044187C /* AutoArchiverHelper.m */,
@@ -132,6 +140,8 @@
 				5D5CDFDD1BEE7E0700672CA8 /* ViewController.m */,
 				5D5CDFDF1BEE7E0700672CA8 /* Images.xcassets */,
 				5D5CDFCB1BEE7E0600672CA8 /* Supporting Files */,
+				5D8F6B551BEEA2AD0044187C /* Student.h */,
+				5D8F6B561BEEA2AD0044187C /* Student.m */,
 			);
 			path = AutoArchiverHelper;
 			sourceTree = "<group>";
@@ -267,6 +277,8 @@
 				5D5CDFDE1BEE7E0700672CA8 /* ViewController.m in Sources */,
 				5D8F6B511BEE8B2E0044187C /* Person.m in Sources */,
 				5D5CDFD51BEE7E0600672CA8 /* AppDelegate.m in Sources */,
+				5D8F6B571BEEA2AD0044187C /* Student.m in Sources */,
+				5D8F6B541BEEA25A0044187C /* AutoArchiver.m in Sources */,
 				5D5CDFD11BEE7E0600672CA8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
