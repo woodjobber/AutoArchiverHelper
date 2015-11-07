@@ -22,6 +22,8 @@
 		5D5CDFE91BEE7E0700672CA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D5CDFC81BEE7E0600672CA8 /* UIKit.framework */; };
 		5D5CDFF11BEE7E0700672CA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D5CDFEF1BEE7E0700672CA8 /* InfoPlist.strings */; };
 		5D5CDFF31BEE7E0700672CA8 /* AutoArchiverHelperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D5CDFF21BEE7E0700672CA8 /* AutoArchiverHelperTests.m */; };
+		5D8F6B501BEE8B2E0044187C /* AutoArchiverHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F6B4D1BEE8B2E0044187C /* AutoArchiverHelper.m */; };
+		5D8F6B511BEE8B2E0044187C /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D8F6B4F1BEE8B2E0044187C /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,10 @@
 		5D5CDFEE1BEE7E0700672CA8 /* AutoArchiverHelperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AutoArchiverHelperTests-Info.plist"; sourceTree = "<group>"; };
 		5D5CDFF01BEE7E0700672CA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5D5CDFF21BEE7E0700672CA8 /* AutoArchiverHelperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutoArchiverHelperTests.m; sourceTree = "<group>"; };
+		5D8F6B4C1BEE8B2E0044187C /* AutoArchiverHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoArchiverHelper.h; sourceTree = "<group>"; };
+		5D8F6B4D1BEE8B2E0044187C /* AutoArchiverHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoArchiverHelper.m; sourceTree = "<group>"; };
+		5D8F6B4E1BEE8B2E0044187C /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		5D8F6B4F1BEE8B2E0044187C /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,10 @@
 			children = (
 				5D5CDFD31BEE7E0600672CA8 /* AppDelegate.h */,
 				5D5CDFD41BEE7E0600672CA8 /* AppDelegate.m */,
+				5D8F6B4C1BEE8B2E0044187C /* AutoArchiverHelper.h */,
+				5D8F6B4D1BEE8B2E0044187C /* AutoArchiverHelper.m */,
+				5D8F6B4E1BEE8B2E0044187C /* Person.h */,
+				5D8F6B4F1BEE8B2E0044187C /* Person.m */,
 				5D5CDFD61BEE7E0700672CA8 /* Main_iPhone.storyboard */,
 				5D5CDFD91BEE7E0700672CA8 /* Main_iPad.storyboard */,
 				5D5CDFDC1BEE7E0700672CA8 /* ViewController.h */,
@@ -253,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8F6B501BEE8B2E0044187C /* AutoArchiverHelper.m in Sources */,
 				5D5CDFDE1BEE7E0700672CA8 /* ViewController.m in Sources */,
+				5D8F6B511BEE8B2E0044187C /* Person.m in Sources */,
 				5D5CDFD51BEE7E0600672CA8 /* AppDelegate.m in Sources */,
 				5D5CDFD11BEE7E0600672CA8 /* main.m in Sources */,
 			);
@@ -470,6 +482,7 @@
 				5D5CDFF81BEE7E0700672CA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D5CDFF91BEE7E0700672CA8 /* Build configuration list for PBXNativeTarget "AutoArchiverHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +491,7 @@
 				5D5CDFFB1BEE7E0700672CA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
