@@ -19,8 +19,7 @@ _Pragma("clang diagnostic pop") \
 
 @implementation AutoArchiver
 
-// 返回self的所有对象名称
-+ (NSArray *)propertyOfSelf{
++ (NSArray *)getIvarList{
     unsigned int count = 0;
     // 1. 获得类中的所有成员变量
     Ivar *ivarList = class_copyIvarList(self, &count);
@@ -45,25 +44,23 @@ _Pragma("clang diagnostic pop") \
 
 // 归档
 - (void)encodeWithCoder:(NSCoder *)enCoder{
-    // 取得所有成员变量名
-    NSArray *properNames = [[self class] propertyOfSelf];
+  
+    NSArray *properNames = [[self class] getIvarList];
     for (NSString *propertyName in properNames) {
-        // 创建指向get方法
+        
         SEL getSel = NSSelectorFromString(propertyName);
-        // 对每一个属性实现归档
+        
         SuppressPerformSelectorLeakWarning([enCoder encodeObject:[self performSelector:getSel] forKey:propertyName]);
         
     }
 }
 // 解档
 - (id)initWithCoder:(NSCoder *)aDecoder{
-    // 取得所有成员变量名
-    NSArray *properNames = [[self class] propertyOfSelf];
+    NSArray *properNames = [[self class] getIvarList];
     for (NSString *propertyName in properNames) {
-        // 创建指向属性的set方法
-        // 1.获取属性名的第一个字符，变为大写字母
+        // 1.获取属性名的第一个字符，且变为大写
         NSString *firstCharater = [propertyName substringToIndex:1].uppercaseString;
-        // 2.替换掉属性名的第一个字符为大写字符，并拼接出set方法的方法名
+        // 2.并拼接出set方法的方法名
         NSString *setPropertyName = [NSString stringWithFormat:@"set%@%@:",firstCharater,[propertyName substringFromIndex:1]];
         SEL setSel = NSSelectorFromString(setPropertyName);
         SuppressPerformSelectorLeakWarning( [self performSelector:setSel withObject:[aDecoder decodeObjectForKey:propertyName]]);
@@ -71,11 +68,13 @@ _Pragma("clang diagnostic pop") \
     }
     return  self;
 }
+/覆盖description 方法
 - (NSString *)description{
     
     NSMutableString *descriptionString = [NSMutableString stringWithFormat:@"\n"];
 
-    NSArray *properNames = [[self class] propertyOfSelf];
+    NSArray *properNames = [[self class] getIvarList];
+    
     for (NSString *propertyName in properNames) {
     
         SEL getSel = NSSelectorFromString(propertyName);
@@ -83,7 +82,6 @@ _Pragma("clang diagnostic pop") \
         id _getSel = nil;
         SuppressPerformSelectorLeakWarning(_getSel=[self performSelector:getSel]);
         propertyNameString = [NSString stringWithFormat:@"%@:%@,\n",propertyName,_getSel];
-        //[descriptionString appendString:propertyNameString];
         [descriptionString appendFormat:@"%@",propertyNameString];
     }
     NSString *str_l = @"{"; NSString *str_m = @"}";
