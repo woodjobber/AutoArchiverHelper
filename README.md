@@ -35,16 +35,16 @@
   
          @end
  
-       Person.m中
+####Person.m中
    
          @implementation Person
    
          @synthesize name=_name,ID=_ID,age=age,sex=sex;
    
          @end
- ###2.在其他类使用导入 `#import"AutoArchiverHelper.h"`.
+###2.在其他类使用导入 `#import"AutoArchiverHelper.h"`.
  
- ####xxx.m中
+####xxx.m中
  
         NSString *file2 = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject        stringByAppendingPathComponent:@"person.data"];
    
