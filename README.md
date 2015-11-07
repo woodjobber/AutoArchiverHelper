@@ -46,7 +46,7 @@
          @synthesize name=_name,ID=_ID,age=age,sex=sex;
    
          @end
-###2.在其他类使用导入 `#import"AutoArchiverHelper.h"`.
+###2.在其他类导入 `#import"AutoArchiverHelper.h"` 或者 `#import "AutoArchiver"`
  
 ####xxx.m中
  
