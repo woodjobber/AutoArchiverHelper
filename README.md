@@ -1,7 +1,7 @@
 # AutoArchiverHelper
 
-![image](https://github.com/woodjobber/AutoArchiverHelper/blob/master/woodjobber.jpg);
-
+![image](https://github.com/woodjobber/AutoArchiverHelper/blob/master/woodjobber.jpg)
+===
 ##利用Runtime 实现自动化归档与解档-- 两种方法的实现  
 #####一种是AutoArchiver 类，另一种是AutoArchiverHelper 类。两种方式区别不是很大，都是利用Runtime.任选一种导入到你的工程吧。
 
@@ -12,7 +12,7 @@
       使用方法，很简单 仅仅是继承这个类就行，无论你的 成员变量 带与不带 “_”,都可以正确归档与解挡。像这样:
  
 ###1.建立`Person`类
-
+```
      #import "Person.h"
 
          @interface Person : AutoArchiverHelper
@@ -38,21 +38,22 @@
          @property (nonatomic, strong)NSString *ID;
   
          @end
- 
+``` 
 ####Person.m中
-   
+```  
          @implementation Person
    
          @synthesize name=_name,ID=_ID,age=age,sex=sex;
    
          @end
+```
 ###2.在其他类导入 `#import"AutoArchiverHelper.h"` 或者 `#import "AutoArchiver.h"`
  
 ####xxx.m中
- 
-        NSString *file2 = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject        stringByAppendingPathComponent:@"person.data"];
+```
+        NSString *file2 = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject         stringByAppendingPathComponent:@"person.data"];
    
-         Person *person = [[Person alloc]init];
+        Person *person = [[Person alloc]init];
    
         person.name = @"jack";
    
@@ -62,20 +63,20 @@
   
         person.sex = @"man";
    
-       [NSKeyedArchiver archiveRootObject:person toFile:file2];
+        [NSKeyedArchiver archiveRootObject:person toFile:file2];
 
-       Person *jack =[NSKeyedUnarchiver unarchiveObjectWithFile:file2];
+        Person *jack =[NSKeyedUnarchiver unarchiveObjectWithFile:file2];
    
-       NSLog(@"%@",jack.name);
+        NSLog(@"%@",jack.name);
    
-       NSLog(@"%@",jack.age);
+        NSLog(@"%@",jack.age);
    
-       NSLog(@"%@",jack.ID);
+        NSLog(@"%@",jack.ID);
    
-       NSLog(@"%@",jack.sex);
+        NSLog(@"%@",jack.sex);
    
-       NSLog(@"%@",jack);
-   
+        NSLog(@"%@",jack);
+```  
 #总结
 
 如果有什么错误，请联系作者 woodjobber@outlook.com
