@@ -127,9 +127,9 @@
 			isa = PBXGroup;
 			children = (
 				5D5CDFD31BEE7E0600672CA8 /* AppDelegate.h */,
+				5D5CDFD41BEE7E0600672CA8 /* AppDelegate.m */,
 				5D8F6B521BEEA25A0044187C /* AutoArchiver.h */,
 				5D8F6B531BEEA25A0044187C /* AutoArchiver.m */,
-				5D5CDFD41BEE7E0600672CA8 /* AppDelegate.m */,
 				5D8F6B4C1BEE8B2E0044187C /* AutoArchiverHelper.h */,
 				5D8F6B4D1BEE8B2E0044187C /* AutoArchiverHelper.m */,
 				5D8F6B4E1BEE8B2E0044187C /* Person.h */,

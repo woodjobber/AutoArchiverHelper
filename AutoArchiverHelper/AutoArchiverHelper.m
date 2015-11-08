@@ -42,8 +42,8 @@ static NSArray *GetIvarList(Class cls)
 @end
 
 @implementation AutoArchiverHelper
+#pragma mark -- 实现 NSCoding 协议
 
-@prama mark -- 实现NSCoding 协议
 //归档
 - (void)encodeWithCoder:(NSCoder *)encoder
 {
@@ -53,9 +53,8 @@ static NSArray *GetIvarList(Class cls)
         id value = [self valueForKey:name];
         [encoder encodeObject:value forKey:name];
     }
-
-    
 }
+
 //解档
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -84,7 +83,7 @@ static NSArray *GetIvarList(Class cls)
     
         NSString *key = nil;
         
-        // 在这里一定要注意，这是防止某些成员变量没有'_'.因此需判断
+        // 在这里一定要注意，需要除去'_'
         if ([propertyName hasPrefix:@"_"]) {
             
             key = [propertyName substringFromIndex:1];
@@ -93,7 +92,7 @@ static NSArray *GetIvarList(Class cls)
         }
         SEL getSel = NSSelectorFromString(key);
         
-        NSString *propertyNameString= nil;
+        NSString *propertyNameString = nil;
         
         id _getSel = nil;
         
@@ -103,11 +102,11 @@ static NSArray *GetIvarList(Class cls)
 
         [descriptionString appendFormat:@"%@",propertyNameString];
     }
-    NSString *str_l = @"{";
+    NSString *str_n = @"{";
     
     NSString *str_m = @"}";
     
-    NSString *desc = [NSString stringWithFormat:@"\n%@%@%@",str_l,descriptionString,str_m];
+    NSString *desc = [NSString stringWithFormat:@"\n%@%@%@",str_n,descriptionString,str_m];
     
     return [desc copy];
 }

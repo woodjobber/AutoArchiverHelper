@@ -2,8 +2,8 @@
 //  AutoArchiver.m
 //  Load
 //
-//  Created by zcb on 15-11-7.
-//  Copyright (c) 2015年 zcb. All rights reserved.
+//  Created by chengbin on 15-11-7.
+//  Copyright (c) 2015年 chengbin(woodjobber). All rights reserved.
 //
 
 #define SuppressPerformSelectorLeakWarning(Stuff) \
@@ -84,7 +84,8 @@ _Pragma("clang diagnostic pop") \
         propertyNameString = [NSString stringWithFormat:@"%@:%@,\n",propertyName,_getSel];
         [descriptionString appendFormat:@"%@",propertyNameString];
     }
-    NSString *str_l = @"{"; NSString *str_m = @"}";
+    NSString *str_l = @"{";
+    NSString *str_m = @"}";
     NSString *desc = [NSString stringWithFormat:@"\n%@%@%@",str_l,descriptionString,str_m];
     return [desc copy];
 }
