@@ -60,7 +60,7 @@ _Pragma("clang diagnostic pop") \
     for (NSString *propertyName in properNames) {
         // 1.获取属性名的第一个字符，且变为大写
         NSString *firstCharater = [propertyName substringToIndex:1].uppercaseString;
-        // 2.并拼接出set方法的方法名
+        // 2.拼接出set方法的方法名
         NSString *setPropertyName = [NSString stringWithFormat:@"set%@%@:",firstCharater,[propertyName substringFromIndex:1]];
         SEL setSel = NSSelectorFromString(setPropertyName);
         SuppressPerformSelectorLeakWarning( [self performSelector:setSel withObject:[aDecoder decodeObjectForKey:propertyName]]);
@@ -68,7 +68,7 @@ _Pragma("clang diagnostic pop") \
     }
     return  self;
 }
-/覆盖description 方法
+//覆盖description 方法
 - (NSString *)description{
     
     NSMutableString *descriptionString = [NSMutableString stringWithFormat:@"\n"];
