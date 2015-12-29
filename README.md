@@ -1,5 +1,5 @@
 # AutoArchiverHelper
-[TOC]
+
 ![image](https://github.com/woodjobber/AutoArchiverHelper/blob/master/woodjobber.jpg)
 ===
 ##利用`Runtime` 实现自动化归档与解档-- 两种方法的实现  
